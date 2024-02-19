@@ -1,0 +1,24 @@
+# Ignora archivos de configuraci�n
+config.json
+
+# Ignora directorios de dependencias de Node.js
+node_modules/ 
+
+# Ignora archivos de construcci�n
+build/
+dist/
+
+# Ignora archivos temporales o de sistema
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignora archivos de configuraci�n de Visual Studio Code
+.vscode/
+```
+# Ignora variables de entorno
+variables.env
+
+# Ignora archivos json de colecciones
+DB
