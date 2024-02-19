@@ -35,10 +35,10 @@ const FollowRoutes = require("./Routes/Follow");
 const PostRoutes = require("./Routes/Post");
 const ChatRoutes = require("./Routes/Chat");
 
-app.use("/api/user", UserRoutes);
-app.use("/api/follow", FollowRoutes);
-app.use("/api/post", PostRoutes);
-app.use("/api/chat", ChatRoutes);
+app.use("/user", UserRoutes);
+app.use("/follow", FollowRoutes);
+app.use("/post", PostRoutes);
+app.use("/chat", ChatRoutes);
 
 app.listen(port, host, () => {
   console.log(`Server started on port ${port}`);
