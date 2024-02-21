@@ -231,7 +231,7 @@ const uploadAvatar = async (req, res) => {
       return res.status(400).json({
         status: "error",
         message: "File not found",
-        req: req.file,
+        req: req.body,
       });
     }
     let imageSplit = image.mimetype.split("/");
