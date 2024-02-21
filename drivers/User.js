@@ -226,9 +226,12 @@ const updateUser = async (req, res) => {
 const uploadAvatar = async (req, res) => {
   try {
     let image = req.file;
+    console.log("image");
     if (!image) {
       return res.status(400).json({
+        status: "error",
         message: "File not found",
+        req: req.file,
       });
     }
     let imageSplit = image.mimetype.split("/");
