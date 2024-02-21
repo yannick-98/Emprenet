@@ -225,7 +225,7 @@ const updateUser = async (req, res) => {
 
 const uploadAvatar = async (req, res) => {
   try {
-    let image = req.file;
+    let image = req.body.file0;
     if (!image) {
       return res.status(400).json({
         message: "File not found",
