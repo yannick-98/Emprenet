@@ -251,7 +251,7 @@ const uploadAvatar = async (req, res) => {
 
     const user = await User.findOneAndUpdate(
       { _id: req.user.id },
-      { avatar: req.file.filename },
+      { avatar: image.filename },
       { new: true }
     );
 
@@ -271,15 +271,14 @@ const uploadAvatar = async (req, res) => {
         email: user.email,
         avatar: user.avatar,
       },
-      file: req.file,
+      file: image,
       files: req.files,
     });
   } catch (error) {
     console.log(error);
     return res.status(400).json({
       status: "error",
-      message: "Error",
-      error,
+      message: error,
     });
   }
 };
