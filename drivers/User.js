@@ -225,7 +225,7 @@ const updateUser = async (req, res) => {
 
 const uploadAvatar = async (req, res) => {
   try {
-    let image = req.file;
+    let image = req.files.file0;
     console.log("image");
     if (!image) {
       return res.status(400).json({
