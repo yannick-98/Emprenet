@@ -19,7 +19,7 @@ const UserSchema = new Schema({
   },
   avatar: {
     type: String,
-    default: "https://www.w3schools.com/howto/img_avatar.png",
+    default: "user.png",
   },
   createdAt: {
     type: Date,
